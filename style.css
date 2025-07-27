@@ -1,0 +1,784 @@
+/*importing google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/*Styling whole site*/
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:"imagejs/heroimg.jpg";
+    background-size: cover;
+    overflow-x: hidden;
+   
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+img{
+    height: auto;
+    max-width: 100%;
+    display: block;
+    overflow-x: hidden;
+}
+/* styling navbar*/
+header{
+ background-color: rgb(0, 0, 0);
+ position: fixed;
+ width: 100%;
+ z-index: 5;
+}
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo .logo-text{
+    color: white;  
+    transition: 0.3 ease;
+    padding-left: 20px; 
+    font-size: 30px;
+}
+.navbar .nav-logo .logo-text:hover{
+     font-size: 30px;
+     text-shadow: 0 0 25px orange;             
+     transform:scale(1.1);
+}
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+.navbar .nav-menu .nav-link{
+    color: white;
+    padding: 10px 18px;
+    transition: 0.3 ease;
+}
+.navbar .nav-menu .nav-link:hover{
+    color: orange;
+   text-shadow: 0 0 25px orange;             
+   font-size: 15px;
+}
+
+.navbar :where(#menu-close-button,#menu-open-button){
+    display: none;
+}
+main{
+    overflow-x: hidden;
+}
+.hero-section{
+    filter: drop-shadow(10px 12px 25px rgb(0, 0, 0));
+    background-image: url("imagejs/coffeecupimg.jpg") ;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    min-height: 100vh;
+    
+
+}
+.hero-section  .hero-detail{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+   
+}
+.hero-section .hero-detail .title{
+    font-size: 60px;
+    font-family: "Miniver", sans-serif;
+    color: orange;
+    text-shadow: 0 0 25px orange; 
+    animation: titleAnimation 2s ease-in-out;
+
+}
+@keyframes titleAnimation {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.hero-section .hero-detail .subtitle{
+    font-size: 30px;
+    margin: 8px 0 0 40px;
+    max-width: 70%;
+    font-weight: 300px;
+    animation: subtitleAnimation 2s linear forwards;
+}
+@keyframes subtitleAnimation {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-section .hero-detail .description{
+     margin: 8px;
+     font-size: 23px;
+     animation: descriptionAnimation 2s linear forwards;
+}
+@keyframes descriptionAnimation {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-section .hero-detail .button{
+    display: flex;
+    transition: 0.3 ease;
+}
+.hero-section .hero-detail .button a{
+    margin: 1vw;
+    padding: 10px 30px;
+    color: white;
+    background-color: orange;
+    border-radius: 20px;
+  
+}
+    
+
+.hero-section .hero-detail .button a:hover{
+    border: 1px solid rgb(255, 255, 255); 
+    background: transparent;
+     
+}
+
+
+    
+
+.hero-section .hero-detail #contact-us{
+     border: 1px solid rgb(255, 255, 255); 
+     background: transparent;
+}
+.hero-section .hero-detail #contact-us:hover{
+    background-color: orange;
+     border: none; 
+}
+.about-section{
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.about-section .about-image{
+   
+    width: 50%;
+}
+.about-section .about-detail{
+    width: 50%;
+    margin: 90px 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    text-align: center;
+
+}
+.about-section .about-detail h2{
+    font-size: 58px;
+    color: orange;
+    text-shadow: 0 0 25px orange;
+}
+
+.about-section .about-detail h3{
+    font-size: 36px;
+}
+.about-section .about-detail .section-metatitle span{
+    display: none;
+}
+.about-section .about-detail .section-metatitle span.active{
+    display: inline;
+    
+}
+
+.about-section .about-detail .section-description{
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+   
+}
+.about-section .about-detail button{
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: orange;
+}
+
+
+
+
+
+.menu-section{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.menu-section .section-title{
+    padding-top: 50px;
+    font-size: 7vw;
+    color: white;
+    
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.grid-container .grid-item{
+    
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.grid-container .grid-item:hover {
+    transform: scale(1.05);
+}
+.grid-container .grid-item img{
+    
+    width: 100%;
+    height: 290px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-container .grid-item h3{
+    padding-right: 40px;
+    margin: 10px;
+    text-align: center;
+    
+}
+.grid-container .grid-item p{
+    width: 90%;
+    text-align: center;
+    line-height: 1.6;
+
+}
+.blog-section{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.blog-section .section-title{
+    font-size: 7vw;
+    padding-top: 50px;
+}
+.blog-container{
+    width: 90%;
+    margin:auto;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; ;
+    
+}
+.blog-wrapper{
+    max-width: 100%;
+    border-radius: 10px;
+    display: flex;
+    margin:0px 60px 35px 60px;
+    padding: 20px 10px;
+}
+
+
+
+.blog-item{
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+}
+.blog-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.blog-item .button-learn-more{
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px auto;
+  
+    
+}
+.blog-item .button-learn-more:hover{
+    background-color: #fff;
+    color: orange;
+    border: 1px solid orange;
+}
+.blog-item img{
+    width: 100%;
+    padding: 10px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+.blog-item h3{
+    padding: 10px;
+    max-height: 20%;
+   
+    
+}
+.blog-item p{
+    height: 20%;
+    padding: 10px;
+  
+}
+
+
+.contact{
+     color: white;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( black,gray,black);
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 5vw;
+    color: white;
+}
+.contact .content p{
+    margin: 20px 0;
+}
+.container{
+    background: transparent;;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+ .container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0px;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+.container .contactInfo .box .text{
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    margin-left: 20px;
+  
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+  
+    margin-bottom: 5px;
+    color: orange;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+}
+.contactForm h2{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px 0;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 13px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0px;
+    font-size: 15px;
+    color: #333;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+   
+    transform: translateY(-20px);
+
+}
+#submitbtn{
+    width: 100px;
+    background: rgb(255, 166, 0);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+#submitbtn:hover{
+    transform: scale(1.1);
+
+}
+.popup{
+    position: absolute;
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: transform 0.3s ease;
+}
+.openpopup{
+    visibility: visible;
+}
+
+.popup h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+.popup p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+}
+.popup img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -50px;
+}
+
+.ok-button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.footer-content{
+   
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer-content i{
+    color: white;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+.footer-content i:hover{
+    color: orange;
+  
+    text-shadow: 0 0 25px orange; 
+}
+
+
+@media  screen and (max-width: 900px ){
+    body.show-mobile-menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.2);
+    }
+
+   .navbar :where(#menu-close-button,#menu-open-button) {
+    display: block;
+    font-size: 20px;
+   }
+
+   .navbar #menu-close-button{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+    .navbar #menu-open-button{
+        color: white;
+
+    }
+
+    .navbar .nav-menu {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    left: -300px;
+    top:0;
+    width: 300px;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.2s ease;
+
+}
+
+body.show-mobile-menu .navbar .nav-menu{
+    left: 0;
+}
+.navbar .nav-menu .nav-link{
+    color: white;
+    display: block;
+    margin-top: 17px;
+    font-size:20px
+}
+.navbar .nav-menu #menu-close-button{
+
+    color: #fff;
+}
+.navbar .nav-menu .nav-link:hover{
+    border: 1px solid orange;
+    border-radius: 25px;
+}
+
+.hero-section .section-content{
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+}
+.hero-section .hero-detail .title{
+    font-size: 50px;
+}
+.hero-section .hero-detail .subtitle{
+    font-size: 25px;
+    margin: 8px 0 0 20px;
+    max-width: 90%;
+}
+.hero-section .hero-detail .description{
+    font-size: 15px;
+}
+.about-section{ 
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+ .about-section .about-detail h2{
+        font-size: 45px;
+        
+    }
+    .about-section .about-detail h3{
+        font-size: 30px;
+    }
+
+.about-section .about-image{
+
+height: 140px;
+width: 160px;
+    
+}
+
+.about-section .about-detail .section-description{
+    margin: 10px 0;
+    font-size: 15px;
+   
+}
+
+.about-section .about-detail button{   
+    font-size: 15px;
+   
+}
+
+
+ .contact{
+  
+    padding: 50px;
+
+ }
+ .container{
+    width: 100%;
+    flex-direction: column;
+ }
+ .container .contactInfo{
+    margin-bottom: 40px;
+
+}
+ .container .contactInfo .box{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+    .container .contactInfo,
+    .contactForm{
+        width: 100%;
+        margin: 20px;
+
+}
+.grid-container .grid-item{
+    
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.grid-container .grid-item img{
+    
+    width: 100%;
+    height: 300px;
+}
+.blog-container{
+   
+   width: 80%;
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .hero-detail{
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .about-section .about-image{
+   display:none;
+    
+}
+    .about-section .about-detail h2{
+        font-size: 40px;
+        
+    }
+    .about-section .about-detail h3{
+        font-size: 25px;
+    }
+
+.about-section .about-detail{
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+
+}
+.about-section .about-detail .section-description{
+    margin: 10px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+   
+}
+
+
+.grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+}
+.grid-container .grid-item{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+  .grid-container .grid-item img{
+    width: 65%;
+    height: 250px;
+}
+    
+}
+
+
